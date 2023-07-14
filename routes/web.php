@@ -1,5 +1,6 @@
 <?php
 
+use App\Events\MessageCreated;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    // event(new MessageCreated); atau
+    MessageCreated::dispatch('Lorem Ipsum');
     return view('welcome');
 });
