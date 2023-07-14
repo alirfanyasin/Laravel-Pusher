@@ -16,6 +16,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     // event(new MessageCreated); atau
-    MessageCreated::dispatch('Lorem Ipsum');
+    MessageCreated::dispatch('Hello World');
     return view('welcome');
 });
