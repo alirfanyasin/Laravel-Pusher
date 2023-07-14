@@ -15,7 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    // event(new MessageCreated); atau
-    MessageCreated::dispatch('Hello World');
     return view('welcome');
+});
+
+
+Route::get('/message', function () {
+    // event(new MessageCreated); atau
+    MessageCreated::dispatch('Selamat Pagi');
 });
